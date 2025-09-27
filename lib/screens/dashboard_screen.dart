@@ -55,7 +55,7 @@ class _DashboardScreenState extends State<DashboardScreen>
       // Check if user can view reports
       if (!_currentUser!.canViewReports()) {
         setState(() {
-          _error = '¤Ø³äÁèÁÕÊÔ·¸Ôìã¹¡ÒÃ´Ù reports';
+          _error = 'ï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ã¹¡ï¿½Ã´ï¿½ reports';
           _isLoading = false;
         });
         return;
@@ -105,7 +105,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   }
 
   Widget _buildOverviewTab() {
-    if (_todayReport == null) return Center(child: Text('äÁèÁÕ¢éÍÁÙÅ'));
+    if (_todayReport == null) return Center(child: Text('ï¿½ï¿½ï¿½ï¿½Õ¢ï¿½ï¿½ï¿½ï¿½ï¿½'));
 
     return RefreshIndicator(
       onRefresh: _loadData,
@@ -119,7 +119,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               children: [
                 Expanded(
                   child: StatCard(
-                    title: 'ÂÍ´¢ÒÂÇÑ¹¹Õé',
+                    title: 'ï¿½Í´ï¿½ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½',
                     value: _todayReport!.formattedRevenue,
                     icon: Icons.attach_money,
                     color: Colors.green,
@@ -128,7 +128,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 SizedBox(width: 16),
                 Expanded(
                   child: StatCard(
-                    title: '¨Ó¹Ç¹ÍÍà´ÍÃì',
+                    title: 'ï¿½Ó¹Ç¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
                     value: _todayReport!.totalOrders.toString(),
                     icon: Icons.shopping_cart,
                     color: Colors.blue,
@@ -141,7 +141,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               children: [
                 Expanded(
                   child: StatCard(
-                    title: 'ÊÔ¹¤éÒ·Õè¢ÒÂ',
+                    title: 'ï¿½Ô¹ï¿½ï¿½Ò·ï¿½ï¿½ï¿½ï¿½',
                     value: _todayReport!.totalItems.toString(),
                     icon: Icons.inventory,
                     color: Colors.orange,
@@ -150,8 +150,8 @@ class _DashboardScreenState extends State<DashboardScreen>
                 SizedBox(width: 16),
                 Expanded(
                   child: StatCard(
-                    title: '¤èÒà©ÅÕèÂ/ÍÍà´ÍÃì',
-                    value: 'ß${_todayReport!.averageOrderValue.toStringAsFixed(0)}',
+                    title: 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½',
+                    value: 'ï¿½${_todayReport!.averageOrderValue.toStringAsFixed(0)}',
                     icon: Icons.analytics,
                     color: Colors.purple,
                   ),
@@ -168,7 +168,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'ÂÍ´¢ÒÂ 7 ÇÑ¹ÅèÒÊØ´',
+                      'ï¿½Í´ï¿½ï¿½ï¿½ 7 ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½Ø´',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                     SizedBox(height: 16),
@@ -195,7 +195,7 @@ class _DashboardScreenState extends State<DashboardScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'ÊÔ¹¤éÒ¢ÒÂ´Õ (7 ÇÑ¹ÅèÒÊØ´)',
+              'ï¿½Ô¹ï¿½ï¿½Ò¢ï¿½Â´ï¿½ (7 ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½Ø´)',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             SizedBox(height: 16),
@@ -215,7 +215,7 @@ class _DashboardScreenState extends State<DashboardScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'ÂÍ´¢ÒÂµÒÁËÁÇ´ËÁÙè (30 ÇÑ¹ÅèÒÊØ´)',
+              'ï¿½Í´ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ (30 ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½Ø´)',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             SizedBox(height: 16),
@@ -242,7 +242,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 ),
                 title: Text(entry.key),
                 trailing: Text(
-                  'ß${entry.value.toStringAsFixed(2)}',
+                  'ï¿½${entry.value.toStringAsFixed(2)}',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
@@ -262,15 +262,15 @@ class _DashboardScreenState extends State<DashboardScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '¡ÒÃÇÔà¤ÃÒÐËì¢Ñé¹ÊÙ§',
+              'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù§',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
             SizedBox(height: 16),
             Card(
               child: ListTile(
                 leading: Icon(Icons.trending_up, color: Colors.green),
-                title: Text('á¹Çâ¹éÁ¡ÒÃ¢ÒÂ'),
-                subtitle: Text('¡ÓÅÑ§¾Ñ²¹Ò...'),
+                title: Text('ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¢ï¿½ï¿½'),
+                subtitle: Text('ï¿½ï¿½ï¿½Ñ§ï¿½Ñ²ï¿½ï¿½...'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
@@ -278,8 +278,8 @@ class _DashboardScreenState extends State<DashboardScreen>
             Card(
               child: ListTile(
                 leading: Icon(Icons.schedule, color: Colors.blue),
-                title: Text('ªèÇ§àÇÅÒ¢ÒÂ´Õ'),
-                subtitle: Text('¡ÓÅÑ§¾Ñ²¹Ò...'),
+                title: Text('ï¿½ï¿½Ç§ï¿½ï¿½ï¿½Ò¢ï¿½Â´ï¿½'),
+                subtitle: Text('ï¿½ï¿½ï¿½Ñ§ï¿½Ñ²ï¿½ï¿½...'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
@@ -287,8 +287,8 @@ class _DashboardScreenState extends State<DashboardScreen>
             Card(
               child: ListTile(
                 leading: Icon(Icons.compare_arrows, color: Colors.orange),
-                title: Text('à»ÃÕÂºà·ÕÂºÃÒÂà´×Í¹'),
-                subtitle: Text('¡ÓÅÑ§¾Ñ²¹Ò...'),
+                title: Text('ï¿½ï¿½ï¿½Âºï¿½ï¿½Âºï¿½ï¿½ï¿½ï¿½ï¿½Í¹'),
+                subtitle: Text('ï¿½ï¿½ï¿½Ñ§ï¿½Ñ²ï¿½ï¿½...'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
@@ -305,33 +305,43 @@ class _DashboardScreenState extends State<DashboardScreen>
         title: Text('POS Reports'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         actions: [
-          PopupMenuButton(
+          PopupMenuButton<String>(
             itemBuilder: (context) => [
-              PopupMenuItem(
+              PopupMenuItem<String>(
+                value: 'profile',
                 child: ListTile(
                   leading: Icon(Icons.person),
                   title: Text(_currentUser?.name ?? 'User'),
                   subtitle: Text(_currentUser?.role ?? ''),
                 ),
               ),
-              PopupMenuItemDivider(),
-              PopupMenuItem(
-                onTap: _logout,
+              PopupMenuItem<String>(
+                value: 'divider',
+                enabled: false,
+                child: Divider(),
+              ),
+              PopupMenuItem<String>(
+                value: 'logout',
                 child: ListTile(
                   leading: Icon(Icons.logout),
-                  title: Text('ÍÍ¡¨Ò¡ÃÐºº'),
+                  title: Text('ï¿½Í¡ï¿½Ò¡ï¿½Ðºï¿½'),
                 ),
               ),
             ],
+            onSelected: (value) {
+              if (value == 'logout') {
+                _logout();
+              }
+            },
           ),
         ],
         bottom: TabBar(
           controller: _tabController,
           tabs: [
-            Tab(icon: Icon(Icons.dashboard), text: 'ÀÒ¾ÃÇÁ'),
-            Tab(icon: Icon(Icons.inventory), text: 'ÊÔ¹¤éÒ'),
-            Tab(icon: Icon(Icons.category), text: 'ËÁÇ´ËÁÙè'),
-            Tab(icon: Icon(Icons.analytics), text: 'ÇÔà¤ÃÒÐËì'),
+            Tab(icon: Icon(Icons.dashboard), text: 'ï¿½Ò¾ï¿½ï¿½ï¿½'),
+            Tab(icon: Icon(Icons.inventory), text: 'ï¿½Ô¹ï¿½ï¿½ï¿½'),
+            Tab(icon: Icon(Icons.category), text: 'ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½'),
+            Tab(icon: Icon(Icons.analytics), text: 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½'),
           ],
         ),
       ),
@@ -348,7 +358,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                       SizedBox(height: 16),
                       ElevatedButton(
                         onPressed: _loadData,
-                        child: Text('ÅÍ§ãËÁè'),
+                        child: Text('ï¿½Í§ï¿½ï¿½ï¿½ï¿½'),
                       ),
                     ],
                   ),
